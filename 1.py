@@ -1,17 +1,9 @@
 import time 
 tasks = []
 
-while True: 
-    # time.sleep(1)
-    print("-------------------------")
-    print("" ,"1. Add Task\n", "2. View Task\n", "3. Remove Task \n", "4. Exit")
 
-    choice = input('Enter your Choice: ')
-    # time.sleep(1)
-    
-
-    if choice == '1':
-        # print("-------------------------")
+def add_task():
+    # print("-------------------------")
         task_add = input("Enter your Task here: ")
         time.sleep(1)
         print("-------------------------")
@@ -21,7 +13,8 @@ while True:
         print("\n\n\n\n\n\n")
         tasks.append(task_add)
 
-    elif choice == '2':
+
+def view_task():
         print("\n\n\n\n\n\n")
         time.sleep(1)
         print("-------------------------")
@@ -33,8 +26,7 @@ while True:
         print("-------------------------")
         time.sleep(2)
 
-        
-    elif choice == '3':
+def remove_task():
         print("\n\n\n\n\n\n")
         print("-------------------------")
         print("Tasks: ")
@@ -62,15 +54,37 @@ while True:
         time.sleep(1)
         print("\n\n\n\n\n\n")
 
-    elif choice == '4' or choice == "Exit" or choice == "exit":
-        
-        break
-
-    else:
+def invalid_input():
         print("\n-------------------------")
         print("Enter a Valid Choice!")
         print("-------------------------")
         time.sleep(1)
+
+
+
+while True: 
+    # time.sleep(1)
+    print("-------------------------")
+    print("" ,"1. Add Task\n", "2. View Task\n", "3. Remove Task \n", "4. Exit")
+
+    choice = input('Enter your Choice: ')
+    # time.sleep(1)
+    
+    if choice == '1':
+         add_task()
+    elif choice == '2':
+         view_task()  
+        
+    elif choice == '3':
+         remove_task()
+        
+
+    elif choice == '4' or choice == "Exit" or choice == "exit":
+        break
+
+    else:
+         invalid_input()
+        
         
 
 
